@@ -81,7 +81,7 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/awaity/awaity.github.io.git #git@github.com:yourname/yourname.github.io.git
+  repo: git@github.com:awaity/awaity.github.io.git #git@github.com:yourname/yourname.github.io.git
   branch: master
   message:
 
