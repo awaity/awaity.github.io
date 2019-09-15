@@ -20,13 +20,5 @@ git push -u origin hexo
 
 ```
 
-```
-添加自动化部署后
 
-hexo new post 'postName'
-git add .
-git commit -m "desc"
-git push -u origin hexo
-
-```
 
