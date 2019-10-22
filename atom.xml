@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.awaity.cn/"/>
-  <updated>2019-09-15T13:18:30.303Z</updated>
+  <updated>2019-10-22T16:00:39.429Z</updated>
   <id>http://www.awaity.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>聊聊 `undefined` 出现的几种情况</title>
+    <link href="http://www.awaity.cn/2019/10/22/1/"/>
+    <id>http://www.awaity.cn/2019/10/22/1/</id>
+    <published>2019-10-22T15:38:47.000Z</published>
+    <updated>2019-10-22T16:00:39.429Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>没有伞的孩子，更要努力奔跑</p></blockquote><p>在学习（吹牛）群遇到一道面试题，感觉挺简单的，结果没答全，发现自己js基础概念有点模糊，故总结一波。</p><a id="more"></a><h2 id="1、变量被声明了，但没有赋值"><a href="#1、变量被声明了，但没有赋值" class="headerlink" title="1、变量被声明了，但没有赋值"></a>1、变量被声明了，但没有赋值</h2><p>在 <code>HTML</code> 语言中，按顺序执行下来的，你在某一行定义了一个a数组并且给赋值了，但是在接下来你的循环里又重新定义了a数组，没有给赋值，输出的结果就会是 <code>undefined</code>。</p><p>在 <code>javascipt</code> 中，变量是通过 <code>var</code> 声明的，变量在声明的时候的同时没有赋值，那么 <code>javaScript</code> 引擎会将此变量自动指向 <code>undefined</code> 。使用 <code>var</code> 声明变量时，会出现变量提升，即 <code>js</code> 执行时 有个 <code>预解析</code> 的过程，先找关键字 <code>var</code> ，存为 <code>undefined</code> ，再找函数 <code>function</code> 存整个函数，然后逐行执行代码，函数内部也有 <code>预解析</code> ，原理同上。</p><blockquote><p>undefined——空变量，变量声明未赋值，访问一个未初始化的变量时返回的值</p><p>null——–空对象，访问一个不存在的对象时所返回的值</p></blockquote><h2 id="2、函数没有return，有return没有返回值。函数没有返回值，默认返回-undefined"><a href="#2、函数没有return，有return没有返回值。函数没有返回值，默认返回-undefined" class="headerlink" title="2、函数没有return，有return没有返回值。函数没有返回值，默认返回 undefined"></a>2、函数没有return，有return没有返回值。函数没有返回值，默认返回 <code>undefined</code></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="number">111</span>)&#125;()</span><br><span class="line">   <span class="built_in">console</span>.log(a)  <span class="comment">//undefined</span></span><br></pre></td></tr></table></figure><h2 id="3、函数没有传参"><a href="#3、函数没有传参" class="headerlink" title="3、函数没有传参"></a>3、函数没有传参</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">x,y</span>)</span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(x,y,x+y)</span><br><span class="line">   &#125;</span><br><span class="line">   fn(<span class="number">10</span>)   <span class="comment">//10 undefined NaN</span></span><br><span class="line">   fn(<span class="number">10</span>,<span class="number">1</span>) <span class="comment">//10 1 11</span></span><br></pre></td></tr></table></figure><h2 id="4、访问对象上面不存在的属性"><a href="#4、访问对象上面不存在的属性" class="headerlink" title="4、访问对象上面不存在的属性"></a>4、访问对象上面不存在的属性</h2><p>这是由于 <code>javaScript</code> 引擎对没有显示指定对象链的变量，会尝试先从自己开始查找变量，没有找到则沿着作用域链依次向上进行查找。如果均查找失败，则抛出“变量未定义（undefined）”的异常。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;没有伞的孩子，更要努力奔跑&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在学习（吹牛）群遇到一道面试题，感觉挺简单的，结果没答全，发现自己js基础概念有点模糊，故总结一波。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="js" scheme="http://www.awaity.cn/categories/js/"/>
+    
+    
+      <category term="js" scheme="http://www.awaity.cn/tags/js/"/>
+    
+      <category term="学习" scheme="http://www.awaity.cn/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>日常学习记录</title>
