@@ -124,18 +124,18 @@ daovoice('update');
 
 
 
-  <meta name="description" content="没有伞的孩子，更要努力奔跑  在学习（吹牛）群遇到一道面试题，感觉挺简单的，结果没答全，发现自己js基础概念有点模糊，故总结一波。">
-<meta name="keywords" content="学习,js">
+  <meta name="description" content="与其违心赔笑，不如一人安静，与其在意别人的背弃和不善，不如经营自己的尊严和美好">
+<meta name="keywords" content="js,正则">
 <meta property="og:type" content="article">
-<meta property="og:title" content="聊聊 `undefined` 出现的几种情况">
-<meta property="og:url" content="http://www.awaity.cn/2019/10/22/1/index.html">
+<meta property="og:title" content="聊聊正则">
+<meta property="og:url" content="http://www.awaity.cn/2019/11/02/1/index.html">
 <meta property="og:site_name" content="拾光栈">
-<meta property="og:description" content="没有伞的孩子，更要努力奔跑  在学习（吹牛）群遇到一道面试题，感觉挺简单的，结果没答全，发现自己js基础概念有点模糊，故总结一波。">
+<meta property="og:description" content="与其违心赔笑，不如一人安静，与其在意别人的背弃和不善，不如经营自己的尊严和美好">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-22T16:00:39.429Z">
+<meta property="og:updated_time" content="2019-11-02T14:06:25.837Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="聊聊 `undefined` 出现的几种情况">
-<meta name="twitter:description" content="没有伞的孩子，更要努力奔跑  在学习（吹牛）群遇到一道面试题，感觉挺简单的，结果没答全，发现自己js基础概念有点模糊，故总结一波。">
+<meta name="twitter:title" content="聊聊正则">
+<meta name="twitter:description" content="与其违心赔笑，不如一人安静，与其在意别人的背弃和不善，不如经营自己的尊严和美好">
 
 
 
@@ -145,7 +145,7 @@ daovoice('update');
 
   
   
-  <link rel="canonical" href="http://www.awaity.cn/2019/10/22/1/">
+  <link rel="canonical" href="http://www.awaity.cn/2019/11/02/1/">
 
 
 
@@ -155,7 +155,7 @@ daovoice('update');
   };
 </script>
 
-  <title>聊聊 `undefined` 出现的几种情况 | 拾光栈</title>
+  <title>聊聊正则 | 拾光栈</title>
   
 
 
@@ -396,7 +396,7 @@ daovoice('update');
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.awaity.cn/2019/10/22/1/">
+    <link itemprop="mainEntityOfPage" href="http://www.awaity.cn/2019/11/02/1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="AwaitY">
@@ -413,7 +413,7 @@ daovoice('update');
 
         
         
-          <h1 class="post-title" itemprop="name headline">聊聊 `undefined` 出现的几种情况
+          <h1 class="post-title" itemprop="name headline">聊聊正则
 
               
             
@@ -439,23 +439,13 @@ daovoice('update');
                 
               
 
-              <time title="创建时间：2019-10-22 23:38:47" itemprop="dateCreated datePublished" datetime="2019-10-22T23:38:47+08:00">2019-10-22</time>
+              <time title="创建时间：2019-11-02 21:02:59 / 修改时间：22:06:25" itemprop="dateCreated datePublished" datetime="2019-11-02T21:02:59+08:00">2019-11-02</time>
             </span>
           
 
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-10-23 00:00:39" itemprop="dateModified" datetime="2019-10-23T00:00:39+08:00">2019-10-23</time>
-              </span>
             
           
 
@@ -503,7 +493,7 @@ daovoice('update');
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">793</span>
+              <span title="本文字数">5.5k</span>
             </span>
           
 
@@ -515,7 +505,7 @@ daovoice('update');
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">1 分钟</span>
+              <span title="阅读时长">5 分钟</span>
             </span>
           
 
@@ -534,23 +524,57 @@ daovoice('update');
       
 
       
-        <blockquote>
-<p>没有伞的孩子，更要努力奔跑</p>
-</blockquote>
-<p>在学习（吹牛）群遇到一道面试题，感觉挺简单的，结果没答全，发现自己js基础概念有点模糊，故总结一波。</p>
+        <p>与其违心赔笑，不如一人安静，与其在意别人的背弃和不善，不如经营自己的尊严和美好</p>
 <a id="more"></a>
 
-<h2 id="1、变量被声明了，但没有赋值"><a href="#1、变量被声明了，但没有赋值" class="headerlink" title="1、变量被声明了，但没有赋值"></a>1、变量被声明了，但没有赋值</h2><p>在 <code>HTML</code> 语言中，按顺序执行下来的，你在某一行定义了一个a数组并且给赋值了，但是在接下来你的循环里又重新定义了a数组，没有给赋值，输出的结果就会是 <code>undefined</code>。</p>
-<p>在 <code>javascipt</code> 中，变量是通过 <code>var</code> 声明的，变量在声明的时候的同时没有赋值，那么 <code>javaScript</code> 引擎会将此变量自动指向 <code>undefined</code> 。使用 <code>var</code> 声明变量时，会出现变量提升，即 <code>js</code> 执行时 有个 <code>预解析</code> 的过程，先找关键字 <code>var</code> ，存为 <code>undefined</code> ，再找函数 <code>function</code> 存整个函数，然后逐行执行代码，函数内部也有 <code>预解析</code> ，原理同上。</p>
-<blockquote>
-<p>undefined——空变量，变量声明未赋值，访问一个未初始化的变量时返回的值</p>
-<p>null——–空对象，访问一个不存在的对象时所返回的值</p>
-</blockquote>
-<h2 id="2、函数没有return，有return没有返回值。函数没有返回值，默认返回-undefined"><a href="#2、函数没有return，有return没有返回值。函数没有返回值，默认返回-undefined" class="headerlink" title="2、函数没有return，有return没有返回值。函数没有返回值，默认返回 undefined"></a>2、函数没有return，有return没有返回值。函数没有返回值，默认返回 <code>undefined</code></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="number">111</span>)&#125;()</span><br><span class="line">   <span class="built_in">console</span>.log(a)  <span class="comment">//undefined</span></span><br></pre></td></tr></table></figure>
+<h2 id="正则表达式是匹配模式，要么-匹配字符，要么-匹配位置"><a href="#正则表达式是匹配模式，要么-匹配字符，要么-匹配位置" class="headerlink" title="正则表达式是匹配模式，要么 匹配字符，要么 匹配位置"></a>正则表达式是匹配模式，要么 <code>匹配字符</code>，要么 <code>匹配位置</code></h2><h2 id="一-四种匹配位置的方法"><a href="#一-四种匹配位置的方法" class="headerlink" title="一. 四种匹配位置的方法"></a>一. 四种匹配位置的方法</h2><p><code>^</code>（脱字符）匹配开头，在多行匹配中匹配行开头。</p>
+<p><code>$</code>（美元符号）匹配结尾，在多行匹配中匹配行结尾。</p>
+<p><code>\b</code>是单词边界，具体就是<code>\w</code>和<code>\W</code>之间的位置，也包括<code>\w</code>和<code>^</code>之间的位置，也包括<code>\w</code>和<code>$</code>之间的位置。首先，我们知道，<code>\w</code>是字符组<code>[0-9a-zA-Z_]</code>的简写形式，即<code>\w</code>是字母数字或者下划线的中任何一个字符。而<code>\W</code>是排除字符组<code>[^0-9a-zA-Z_]</code>的简写形式，即<code>\W</code>是<code>\w</code>以外的任何一个字符。</p>
+<p><code>(?=p)</code>，表示匹配到字符 <code>p</code> 前面的位置。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> result = <span class="string">"happy"</span>.replace(<span class="regexp">/(?=p)/g</span>, <span class="string">'#'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(result); </span><br><span class="line"><span class="comment">// =&gt;  ha#p#py</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="3、函数没有传参"><a href="#3、函数没有传参" class="headerlink" title="3、函数没有传参"></a>3、函数没有传参</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">x,y</span>)</span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(x,y,x+y)</span><br><span class="line">   &#125;</span><br><span class="line">   fn(<span class="number">10</span>)   <span class="comment">//10 undefined NaN</span></span><br><span class="line">   fn(<span class="number">10</span>,<span class="number">1</span>) <span class="comment">//10 1 11</span></span><br></pre></td></tr></table></figure>
+<p><code>(?!p)</code>就是<code>(?=p)</code>的反面意思，而其后还有表达式的话，表示不能是。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> result = <span class="string">"happy"</span>.replace(<span class="regexp">/(?!p)/g</span>, <span class="string">'#'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(result); </span><br><span class="line"><span class="comment">// =&gt;  #h#app#y#</span></span><br><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/(?!^[0-9]+$)^[0-a-zA-Z]+$/g</span></span><br><span class="line">reg.test(<span class="string">'111111111111111'</span>)  <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="4、访问对象上面不存在的属性"><a href="#4、访问对象上面不存在的属性" class="headerlink" title="4、访问对象上面不存在的属性"></a>4、访问对象上面不存在的属性</h2><p>这是由于 <code>javaScript</code> 引擎对没有显示指定对象链的变量，会尝试先从自己开始查找变量，没有找到则沿着作用域链依次向上进行查找。如果均查找失败，则抛出“变量未定义（undefined）”的异常。</p>
+<h2 id="二-相关案例"><a href="#二-相关案例" class="headerlink" title="二. 相关案例"></a>二. 相关案例</h2><h3 id="1-不匹配任何东西的正则"><a href="#1-不匹配任何东西的正则" class="headerlink" title="1. 不匹配任何东西的正则"></a>1. 不匹配任何东西的正则</h3><p>easy，<code>/.^/</code></p>
+<p>因为此正则要求只有一个字符，但该字符后面是开头。</p>
+<h3 id="2-数字的千位分隔符表示法"><a href="#2-数字的千位分隔符表示法" class="headerlink" title="2. 数字的千位分隔符表示法"></a>2. 数字的千位分隔符表示法</h3><p>比如把”12345678”，变成”12,345,678”。</p>
+<p>可见是需要把相应的位置替换成”,”。</p>
+<p>思路是什么呢？</p>
+<h4 id="2-1-替换出最后一个逗号"><a href="#2-1-替换出最后一个逗号" class="headerlink" title="2.1 替换出最后一个逗号"></a>2.1 替换出最后一个逗号</h4><p>使用<code>(?=\d{3}$)</code>就可以做到：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> result = <span class="string">"12345678"</span>.replace(<span class="regexp">/(?=\d&#123;3&#125;$)/g</span>, <span class="string">','</span>)</span><br><span class="line"><span class="built_in">console</span>.log(result); </span><br><span class="line"><span class="comment">// =&gt; "12345,678"</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-替换出所有的逗号"><a href="#2-2-替换出所有的逗号" class="headerlink" title="2.2 替换出所有的逗号"></a>2.2 替换出所有的逗号</h4><p>因为逗号出现的位置，要求后面3个数字一组，也就是<code>\d{3}</code>至少出现一次。</p>
+<p>此时可以使用量词<code>+</code>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> result = <span class="string">"12345678"</span>.replace(<span class="regexp">/(?=(\d&#123;3&#125;)+$)/g</span>, <span class="string">','</span>)</span><br><span class="line"><span class="built_in">console</span>.log(result); </span><br><span class="line"><span class="comment">// =&gt; "12,345,678"</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-3-匹配其余案例"><a href="#2-3-匹配其余案例" class="headerlink" title="2.3 匹配其余案例"></a>2.3 匹配其余案例</h4><p>写完正则后，要多验证几个案例，此时我们会发现问题：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">`var result = "123456789".replace(/(?=(\d&#123;3&#125;)+$)/g, ',')console.log(result); // =&gt; ",123,456,789"`</span></span><br></pre></td></tr></table></figure>
+
+<p>因为上面的正则，仅仅表示把从结尾向前数，一但是3的倍数，就把其前面的位置替换成逗号。因此才会出现这个问题。怎么解决呢？我们要求匹配的到这个位置不能是开头，即 <code>(?!^)</code></p>
+<h4 id="2-4-最终完成"><a href="#2-4-最终完成" class="headerlink" title="2.4 最终完成"></a>2.4 最终完成</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str1 = <span class="string">"12345678"</span>,</span><br><span class="line">str2 = <span class="string">"123456789"</span>;</span><br><span class="line">reg = <span class="regexp">/(?!^)(?=(\d&#123;3&#125;)+$)/g</span>;</span><br><span class="line"><span class="keyword">var</span> result = str1.replace(reg, <span class="string">','</span>)</span><br><span class="line"><span class="built_in">console</span>.log(result); </span><br><span class="line"><span class="comment">// =&gt; "12,345,678"</span></span><br><span class="line">result = str2.replace(reg, <span class="string">','</span>);</span><br><span class="line"><span class="built_in">console</span>.log(result); </span><br><span class="line"><span class="comment">// =&gt; "123,456,789"</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="三-常用正则"><a href="#三-常用正则" class="headerlink" title="三.常用正则"></a>三.常用正则</h3><h4 id="校验数字"><a href="#校验数字" class="headerlink" title="校验数字"></a>校验数字</h4><p>\1. 数字：<code>^[0-9]*$</code></p>
+<p>\2. n位的数字：<code>^\d{n}$</code></p>
+<p>\3. 至少n位的数字：<code>^\d{n,}$</code></p>
+<p>\4. m-n位的数字：<code>^\d{m,n}$</code></p>
+<p>\5. 零和非零开头的数字：<code>^(0|[1-9][0-9]*)$</code></p>
+<p>\6. 非零开头的最多带两位小数的数字：<code>^([1-9][0-9]*)+(.[0-9]{1,2})?$</code></p>
+<p>\7. 带1-2位小数的正数或负数：<code>^(\-)?\d+(\.\d{1,2})?$</code></p>
+<p>\8. 正数、负数、和小数：<code>^(\-|\+)?\d+(\.\d+)?$</code></p>
+<p>\9. 有两位小数的正实数：<code>^[0-9]+(.[0-9]{2})?$</code></p>
+<p>\10. 有1~3位小数的正实数：<code>^[0-9]+(.[0-9]{1,3})?$</code></p>
+<p>\11. 非零的正整数：<code>^[1-9]\d*$ 或</code>^([1-9][0-9]<em>){1,3}$<code>或</code>^+?[1-9][0-9]</em>$`</p>
+<p>\12. 非零的负整数：<code>^\-[1-9][]0-9&quot;*$</code> 或 <code>^-[1-9]\d*$</code></p>
+<p>\13. 非负整数：<code>^\d+$ 或</code>^[1-9]\d*|0$`</p>
+<p>\14. 非正整数：<code>^-[1-9]\d*|0$</code> 或 <code>^((-\d+)|(0+))$</code></p>
+<p>\15. 非负浮点数：<code>^\d+(\.\d+)?$</code> 或 <code>^[1-9]\d*\.\d*|0\.\d*[1-9]\d*|0?\.0+|0$</code></p>
+<p>\16. 非正浮点数：<code>^((-\d+(\.\d+)?)|(0+(\.0+)?))$</code> 或 <code>^(-([1-9]\d*\.\d*|0\.\d*[1-9]\d*))|0?\.0+|0$</code></p>
+<p>\17. 正浮点数：<code>^[1-9]\d*\.\d*|0\.\d*[1-9]\d*$</code> 或 <code>^(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$</code></p>
+<p>\18. 负浮点数：<code>^-([1-9]\d*\.\d*|0\.\d*[1-9]\d*)$</code> 或 <code>^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$</code></p>
+<p>\19. 浮点数：<code>^(-?\d+)(\.\d+)?$</code> 或 <code>^-?([1-9]\d*\.\d*|0\.\d*[1-9]\d*|0?\.0+|0)$</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">#### 校验字符的表达式</span><br><span class="line"></span><br><span class="line"><span class="number">1.</span> 汉字：^[\u4e00-\u9fa5]&#123;<span class="number">0</span>,&#125;$</span><br><span class="line"><span class="number">2.</span> 英文和数字：^[A-Za-z0<span class="number">-9</span>]+$ 或 ^[A-Za-z0<span class="number">-9</span>]&#123;<span class="number">4</span>,<span class="number">40</span>&#125;$</span><br><span class="line"><span class="number">3.</span> 长度为<span class="number">3</span><span class="number">-20</span>的所有字符：^.&#123;<span class="number">3</span>,<span class="number">20</span>&#125;$</span><br><span class="line"><span class="number">4.</span> 由<span class="number">26</span>个英文字母组成的字符串：^[A-Za-z]+$</span><br><span class="line"><span class="number">5.</span> 由<span class="number">26</span>个大写英文字母组成的字符串：^[A-Z]+$</span><br><span class="line"><span class="number">6.</span> 由<span class="number">26</span>个小写英文字母组成的字符串：^[a-z]+$</span><br><span class="line"><span class="number">7.</span> 由数字和<span class="number">26</span>个英文字母组成的字符串：^[A-Za-z0<span class="number">-9</span>]+$</span><br><span class="line"><span class="number">8.</span> 由数字、<span class="number">26</span>个英文字母或者下划线组成的字符串：^\w+$ 或 ^\w&#123;<span class="number">3</span>,<span class="number">20</span>&#125;$</span><br><span class="line"><span class="number">9.</span> 中文、英文、数字包括下划线：^[\u4E00-\u9FA5A-Za-z0<span class="number">-9</span>_]+$</span><br><span class="line"><span class="number">10.</span> 中文、英文、数字但不包括下划线等符号：^[\u4E00-\u9FA5A-Za-z0<span class="number">-9</span>]+$ 或 ^[\u4E00-\u9FA5A-Za-z0<span class="number">-9</span>]&#123;<span class="number">2</span>,<span class="number">20</span>&#125;$</span><br><span class="line"><span class="number">11.</span> 可以输入含有^%&amp;<span class="string">',;=?$\"等字符：[^%&amp;'</span>,;=?$\x22]+ <span class="number">12</span> 禁止输入含有~的字符：[^~\x22]+</span><br><span class="line"></span><br><span class="line">#### 特殊需求表达式</span><br><span class="line"></span><br><span class="line"><span class="number">1.</span> Email地址：^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$</span><br><span class="line"><span class="number">2.</span> 域名：[a-zA-Z0<span class="number">-9</span>][-a-zA-Z0<span class="number">-9</span>]&#123;<span class="number">0</span>,<span class="number">62</span>&#125;(<span class="regexp">/.[a-zA-Z0-9][-a-zA-Z0-9]&#123;0,62&#125;)+/</span>.?</span><br><span class="line"><span class="number">3.</span> InternetURL：[a-zA-z]+:<span class="comment">//[^\s]* 或 ^http://([\w-]+\.)+[\w-]+(/[\w-./?%&amp;=]*)?$</span></span><br><span class="line"><span class="number">4.</span> 手机号码：^(<span class="number">13</span>[<span class="number">0</span><span class="number">-9</span>]|<span class="number">14</span>[<span class="number">5</span>|<span class="number">7</span>]|<span class="number">15</span>[<span class="number">0</span>|<span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span>|<span class="number">5</span>|<span class="number">6</span>|<span class="number">7</span>|<span class="number">8</span>|<span class="number">9</span>]|<span class="number">18</span>[<span class="number">0</span>|<span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span>|<span class="number">5</span>|<span class="number">6</span>|<span class="number">7</span>|<span class="number">8</span>|<span class="number">9</span>])\d&#123;<span class="number">8</span>&#125;$</span><br><span class="line"><span class="number">5.</span> 电话号码(<span class="string">"XXX-XXXXXXX"</span>、<span class="string">"XXXX-XXXXXXXX"</span>、<span class="string">"XXX-XXXXXXX"</span>、<span class="string">"XXX-XXXXXXXX"</span>、<span class="string">"XXXXXXX"</span>和<span class="string">"XXXXXXXX)：^(\(\d&#123;3,4&#125;-)|\d&#123;3.4&#125;-)?\d&#123;7,8&#125;$</span></span><br><span class="line"><span class="string">6. 国内电话号码(0511-4405222、021-87888822)：\d&#123;3&#125;-\d&#123;8&#125;|\d&#123;4&#125;-\d&#123;7&#125;</span></span><br><span class="line"><span class="string">7. 身份证号(15位、18位数字)：^\d&#123;15&#125;|\d&#123;18&#125;$</span></span><br><span class="line"><span class="string">8. 短身份证号码(数字、字母x结尾)：^([0-9])&#123;7,18&#125;(x|X)?$ 或 ^\d&#123;8,18&#125;|[0-9x]&#123;8,18&#125;|[0-9X]&#123;8,18&#125;?$</span></span><br><span class="line"><span class="string">9. 帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：^[a-zA-Z][a-zA-Z0-9_]&#123;4,15&#125;$</span></span><br><span class="line"><span class="string">10. 密码(以字母开头，长度在6~18之间，只能包含字母、数字和下划线)：^[a-zA-Z]\w&#123;5,17&#125;$</span></span><br><span class="line"><span class="string">11. 强密码(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间)：^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).&#123;8,10&#125;$</span></span><br><span class="line"><span class="string">12. 日期格式：^\d&#123;4&#125;-\d&#123;1,2&#125;-\d&#123;1,2&#125;</span></span><br><span class="line"><span class="string">13. 一年的12个月(01～09和1～12)：^(0?[1-9]|1[0-2])$</span></span><br><span class="line"><span class="string">14. 一个月的31天(01～09和1～31)：^((0?[1-9])|((1|2)[0-9])|30|31)$</span></span><br><span class="line"><span class="string">15. 中国邮政编码：[1-9]\d&#123;5&#125;(?!\d) (中国邮政编码为6位数字)</span></span><br><span class="line"><span class="string">16. 有四种钱的表示形式我们可以接受:"</span><span class="number">10000.00</span><span class="string">" 和 "</span><span class="number">10</span>,<span class="number">000.00</span><span class="string">", 和没有 "</span>分<span class="string">" 的 "</span><span class="number">10000</span><span class="string">" 和 "</span><span class="number">10</span>,<span class="number">000</span><span class="string">"：^[1-9][0-9]*$</span></span><br><span class="line"><span class="string">17. 这表示任意一个不以0开头的数字,但是,这也意味着一个字符"</span><span class="number">0</span><span class="string">"不通过,所以我们采用下面的形式：^(0|[1-9][0-9]*)$</span></span><br><span class="line"><span class="string">18. 一个0或者一个不以0开头的数字.我们还可以允许开头有一个负号：^(0|-?[1-9][0-9]*)$</span></span><br><span class="line"><span class="string">19. 这表示一个0或者一个可能为负的开头不为0的数字.让用户以0开头好了.把负号的也去掉,因为钱总不能是负的吧.下面我们要加的是说明可能的小数部分：^[0-9]+(.[0-9]+)?$</span></span><br><span class="line"><span class="string">20. 必须说明的是,小数点后面至少应该有1位数,所以"</span><span class="number">10.</span><span class="string">"是不通过的,但是 "</span><span class="number">10</span><span class="string">" 和 "</span><span class="number">10.2</span><span class="string">" 是通过的：^[0-9]+(.[0-9]&#123;2&#125;)?$</span></span><br><span class="line"><span class="string">21. 这样我们规定小数点后面必须有两位,如果你认为太苛刻了,可以这样：^[0-9]+(.[0-9]&#123;1,2&#125;)?$</span></span><br><span class="line"><span class="string">22. 这样就允许用户只写一位小数.下面我们该考虑数字中的逗号了,我们可以这样：^[0-9]&#123;1,3&#125;(,[0-9]&#123;3&#125;)*(.[0-9]&#123;1,2&#125;)?$</span></span><br><span class="line"><span class="string">23. 到3个数字,后面跟着任意个 逗号+3个数字,逗号成为可选,而不是必须：^([0-9]+|[0-9]&#123;1,3&#125;(,[0-9]&#123;3&#125;)*)(.[0-9]&#123;1,2&#125;)?$</span></span><br><span class="line"><span class="string">24. 备注：这就是最终结果了,别忘了"</span>+<span class="string">"可以用"</span>*<span class="string">"替代如果你觉得空字符串也可以接受的话(奇怪,为什么?)最后,别忘了在用函数时去掉去掉那个反斜杠,一般的错误都在这里</span></span><br><span class="line"><span class="string">25. xml文件：^([a-zA-Z]+-?)+[a-zA-Z0-9]+\\.[x|X][m|M][l|L]$</span></span><br><span class="line"><span class="string">26. 中文字符的正则表达式：[\u4e00-\u9fa5]</span></span><br><span class="line"><span class="string">27. 双字节字符：[^\x00-\xff] (包括汉字在内，可以用来计算字符串的长度(一个双字节字符长度计2，ASCII字符计1))</span></span><br><span class="line"><span class="string">28. 空白行的正则表达式：\n\s*\r (可以用来删除空白行)</span></span><br><span class="line"><span class="string">29. HTML标记的正则表达式：&lt;(\S*?)[^&gt;]*&gt;.*?&lt;/\1&gt;|&lt;.*? /&gt; (网上流传的版本太糟糕，上面这个也仅仅能部分，对于复杂的嵌套标记依旧无能为力)</span></span><br><span class="line"><span class="string">30. 首尾空白字符的正则表达式：^\s*|\s*$或(^\s*)|(\s*$) (可以用来删除行首行尾的空白字符(包括空格、制表符、换页符等等)，非常有用的表达式)</span></span><br><span class="line"><span class="string">31. 腾讯QQ号：[1-9][0-9]&#123;4,&#125; (腾讯QQ号从10000开始)</span></span><br><span class="line"><span class="string">32. IP地址：\d+\.\d+\.\d+\.\d+ (提取IP地址时有用)</span></span><br><span class="line"><span class="string">33. IP地址：((?:(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d)\\.)&#123;3&#125;(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d))</span></span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -618,7 +642,7 @@ daovoice('update');
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://www.awaity.cn/2019/10/22/1/" title="聊聊 `undefined` 出现的几种情况">http://www.awaity.cn/2019/10/22/1/</a>
+    <a href="http://www.awaity.cn/2019/11/02/1/" title="聊聊正则">http://www.awaity.cn/2019/11/02/1/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -642,9 +666,9 @@ daovoice('update');
         
         <div class="post-tags">
           
-            <a href="/tags/学习/" rel="tag"><i class="fa fa-tag"></i> 学习</a>
-          
             <a href="/tags/js/" rel="tag"><i class="fa fa-tag"></i> js</a>
+          
+            <a href="/tags/正则/" rel="tag"><i class="fa fa-tag"></i> 正则</a>
           
         </div>
       
@@ -678,8 +702,8 @@ daovoice('update');
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/26/1/" rel="next" title="日常学习记录">
-                <i class="fa fa-chevron-left"></i> 日常学习记录
+              <a href="/2019/10/22/1/" rel="next" title="聊聊 `undefined` 出现的几种情况">
+                <i class="fa fa-chevron-left"></i> 聊聊 `undefined` 出现的几种情况
               </a>
             
           </div>
@@ -687,10 +711,6 @@ daovoice('update');
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/11/02/1/" rel="prev" title="聊聊正则">
-                聊聊正则 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -941,7 +961,7 @@ daovoice('update');
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、变量被声明了，但没有赋值"><span class="nav-number">1.</span> <span class="nav-text">1、变量被声明了，但没有赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、函数没有return，有return没有返回值。函数没有返回值，默认返回-undefined"><span class="nav-number">2.</span> <span class="nav-text">2、函数没有return，有return没有返回值。函数没有返回值，默认返回 undefined</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、函数没有传参"><span class="nav-number">3.</span> <span class="nav-text">3、函数没有传参</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、访问对象上面不存在的属性"><span class="nav-number">4.</span> <span class="nav-text">4、访问对象上面不存在的属性</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#正则表达式是匹配模式，要么-匹配字符，要么-匹配位置"><span class="nav-number">1.</span> <span class="nav-text">正则表达式是匹配模式，要么 匹配字符，要么 匹配位置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一-四种匹配位置的方法"><span class="nav-number">2.</span> <span class="nav-text">一. 四种匹配位置的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-相关案例"><span class="nav-number">3.</span> <span class="nav-text">二. 相关案例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-不匹配任何东西的正则"><span class="nav-number">3.1.</span> <span class="nav-text">1. 不匹配任何东西的正则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-数字的千位分隔符表示法"><span class="nav-number">3.2.</span> <span class="nav-text">2. 数字的千位分隔符表示法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-替换出最后一个逗号"><span class="nav-number">3.2.1.</span> <span class="nav-text">2.1 替换出最后一个逗号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-替换出所有的逗号"><span class="nav-number">3.2.2.</span> <span class="nav-text">2.2 替换出所有的逗号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-匹配其余案例"><span class="nav-number">3.2.3.</span> <span class="nav-text">2.3 匹配其余案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-最终完成"><span class="nav-number">3.2.4.</span> <span class="nav-text">2.4 最终完成</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-常用正则"><span class="nav-number">3.3.</span> <span class="nav-text">三.常用正则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#校验数字"><span class="nav-number">3.3.1.</span> <span class="nav-text">校验数字</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1148,7 +1168,7 @@ daovoice('update');
 
 <script>
   window.livereOptions = {
-    refer: '2019/10/22/1/'
+    refer: '2019/11/02/1/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
