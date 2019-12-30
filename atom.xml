@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.awaity.cn/"/>
-  <updated>2019-11-02T14:06:25.837Z</updated>
+  <updated>2019-12-30T15:13:22.559Z</updated>
   <id>http://www.awaity.cn/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>live-server 的使用</title>
+    <link href="http://www.awaity.cn/2019/12/29/1/"/>
+    <id>http://www.awaity.cn/2019/12/29/1/</id>
+    <published>2019-12-29T14:21:20.000Z</published>
+    <updated>2019-12-30T15:13:22.559Z</updated>
+    
+    <content type="html"><![CDATA[<p>​        一款<code>npm</code>工具，全局<code>npm i -g live-server</code>后，项目目录使用<code>live-server</code>命令行命令便可直接在浏览器中预览（默认找<code>index.html</code>，其他请自行带上文件名空格后跟在后面），并且自动全局监听实时更新。这就非常方便我们日常开发H5等静态页面了。</p><a id="more"></a><h2 id="常用配置"><a href="#常用配置" class="headerlink" title="常用配置"></a>常用配置</h2><p><img src="https://i.loli.net/2019/12/29/fvODUkQCE1Yh5Ws.jpg" alt="12842279-a9ef6cb7cf1c399b.png"></p><h2 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h2><p>本地开发常常需要搭建临时的服务，第一时间我们会想到用<code>http-server</code>。</p><p>但现在流行修改文件浏览器自动刷新<code>hot socketing</code>（热拔插），如<code>live-reload</code>。</p><p>若想浏览器自动打开项目，用<code>opener</code>。</p><p>现在<code>live-server</code>实现了三个插件的所有功能，并且很简单就能启动一个看起来很专业的本地服务。</p><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><ol><li><p><code>NPM</code>全局安装 <code>npm install -g live-server</code></p></li><li><p>在项目根目录使用命令</p><blockquote><p><code>npm init -y</code>初始化一个npm项目</p><p>注意：如果只是想启动一个本地服务，比如开发H5页面想在手机上预览样式调试时，可以直接运行命令 </p><p><code>live-server --host=ip地址</code>，然后手机电脑必须连接同一个无线网，注意电脑关闭防火墙。</p></blockquote></li><li><p>之后项目中找到<code>package.json</code>，修改<code>scripts</code>部分</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"scripts"</span>: &#123;</span><br><span class="line">     <span class="string">"server"</span>: <span class="string">"live-server ./ --port=8081"</span></span><br><span class="line">    <span class="comment">// "server": "live-server 目录名"</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></li></ol><ol start="4"><li>运行 <code>npm run server</code></li></ol><h2 id="node使用"><a href="#node使用" class="headerlink" title="node使用"></a><code>node</code>使用</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> liveServer = <span class="built_in">require</span>(<span class="string">"live-server"</span>);</span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> params = &#123;</span><br><span class="line">    port: <span class="number">8181</span>, <span class="comment">// Set the server port. Defaults to 8080. </span></span><br><span class="line">    host: <span class="string">"0.0.0.0"</span>, <span class="comment">// Set the address to bind to. Defaults to 0.0.0.0 or process.env.IP. </span></span><br><span class="line">    root: <span class="string">"/public"</span>, <span class="comment">// Set root directory that's being served. Defaults to cwd. </span></span><br><span class="line">    open: <span class="literal">false</span>, <span class="comment">// When false, it won't load your browser by default. </span></span><br><span class="line">    ignore: <span class="string">'scss,my/templates'</span>, <span class="comment">// comma-separated string for paths to ignore </span></span><br><span class="line">    file: <span class="string">"index.html"</span>, <span class="comment">// When set, serve this file for every 404 (useful for single-page applications) </span></span><br><span class="line">    wait: <span class="number">1000</span>, <span class="comment">// Waits for all changes, before reloading. Defaults to 0 sec. </span></span><br><span class="line">    mount: [[<span class="string">'/components'</span>, <span class="string">'./node_modules'</span>]], <span class="comment">// Mount a directory to a route. </span></span><br><span class="line">    logLevel: <span class="number">2</span>, <span class="comment">// 0 = errors only, 1 = some, 2 = lots </span></span><br><span class="line">    middleware: [<span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123; next(); &#125;] <span class="comment">// Takes an array of Connect-compatible middleware that are injected into the server middleware stack </span></span><br><span class="line">&#125;;</span><br><span class="line">liveServer.start(params);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;​        一款&lt;code&gt;npm&lt;/code&gt;工具，全局&lt;code&gt;npm i -g live-server&lt;/code&gt;后，项目目录使用&lt;code&gt;live-server&lt;/code&gt;命令行命令便可直接在浏览器中预览（默认找&lt;code&gt;index.html&lt;/code&gt;，其他请自行带上文件名空格后跟在后面），并且自动全局监听实时更新。这就非常方便我们日常开发H5等静态页面了。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.awaity.cn/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="npm" scheme="http://www.awaity.cn/tags/npm/"/>
+    
+      <category term="live-server" scheme="http://www.awaity.cn/tags/live-server/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>8080端口被占解决办法</title>
+    <link href="http://www.awaity.cn/2019/12/29/1/"/>
+    <id>http://www.awaity.cn/2019/12/29/1/</id>
+    <published>2019-12-29T13:49:08.000Z</published>
+    <updated>2019-12-29T14:20:24.972Z</updated>
+    
+    <content type="html"><![CDATA[<p>​    做项目时难免遇到8080端口被占用的情况，如果此时你恰好需要使用8080端口（没有特殊要求的话，换其他端口也可以的），那就接着看吧。毕竟我遇到这个问题，还苦恼了一会，成功爬坑。</p><a id="more"></a><h2 id="1-win-R-键，输入-cmd"><a href="#1-win-R-键，输入-cmd" class="headerlink" title="1.win + R 键，输入 cmd"></a>1.<code>win + R</code> 键，输入 <code>cmd</code></h2><p><img src="https://i.loli.net/2019/12/29/5HTgaecfCPBzmoK.png" alt="1577627921721.png"></p><h2 id="2-复制这串代码到cmd界面："><a href="#2-复制这串代码到cmd界面：" class="headerlink" title="2. 复制这串代码到cmd界面："></a>2. 复制这串代码到<code>cmd</code>界面：</h2><p><code>netstat -aon|findstr &quot;8080&quot;</code></p><p>可以看到8080确实被占用了：   </p><p><img src="https://i.loli.net/2019/12/29/wQGzrAtXo3NfxiU.png" alt="微信截图_20191229221253.png"></p><h2 id="3-把后面的都终止掉，代码如下："><a href="#3-把后面的都终止掉，代码如下：" class="headerlink" title="3.把后面的都终止掉，代码如下："></a>3.把后面的都终止掉，代码如下：</h2><p> <code>taskkill /pid 5140 /F</code></p><p><img src="https://i.loli.net/2019/12/29/JH8ATqgMUcYns1y.png" alt="微信截图_20191229221636.png"></p><p>继续操作关闭其余的即可。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;​    做项目时难免遇到8080端口被占用的情况，如果此时你恰好需要使用8080端口（没有特殊要求的话，换其他端口也可以的），那就接着看吧。毕竟我遇到这个问题，还苦恼了一会，成功爬坑。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="cmd" scheme="http://www.awaity.cn/tags/cmd/"/>
+    
+  </entry>
   
   <entry>
     <title>聊聊正则</title>
@@ -61,9 +105,9 @@
       <category term="js" scheme="http://www.awaity.cn/categories/js/"/>
     
     
-      <category term="学习" scheme="http://www.awaity.cn/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
       <category term="js" scheme="http://www.awaity.cn/tags/js/"/>
+    
+      <category term="学习" scheme="http://www.awaity.cn/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
