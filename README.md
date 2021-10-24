@@ -1,6 +1,6 @@
 # 拾光栈  [![Build Status](https://travis-ci.org/awaity/awaity.github.io.svg?branch=hexo)](https://travis-ci.org/awaity/awaity.github.io)
 
-本博客采用 `hexo` 搭建，欢迎来找我玩 [拾光栈](https://www.awaity.cn)，欢迎 `star/fork`。
+本博客采用 `hexo` 搭建，欢迎来找我玩 [拾光栈](https://awaity.github.io/)，欢迎 `star/fork`。
 
 
 
